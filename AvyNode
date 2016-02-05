@@ -1,0 +1,34 @@
+#!/bin/sh
+# /etc/init.d/AvyNode
+
+### BEGIN INIT INFO
+# Provides:          MyApp.js
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Starts MyApp.js
+# Description:       Start / stop MyApp.js at boot / shutdown.
+### END INIT INFO
+
+# If you want a command to always run, put it here
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+   start)
+    echo "Starting Avy server.js"
+    # run application you want to start
+    sudo node /var/www/Avy/node/server.js
+   ;;
+   stop)
+    echo "Stopping Avy server.js"
+    # kill application you want to stop
+    killall -9 node
+    ;;
+  *)
+    echo "Usage: /etc/init.d/MyApp {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
