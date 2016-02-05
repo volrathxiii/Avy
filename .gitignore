@@ -2,5 +2,6 @@
 .settings/
 /nbproject/private/
 /tmp/sessions.dat
+/tmp/gmail-credential.json
 /tmp/google-credential.json
 client_secret.json
