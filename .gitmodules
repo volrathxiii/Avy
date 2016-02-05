@@ -1,0 +1,3 @@
+[submodule "phpsysinfo"]
+	path = phpsysinfo
+	url = https://github.com/phpsysinfo/phpsysinfo.git

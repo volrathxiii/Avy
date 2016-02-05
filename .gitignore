@@ -1,0 +1,8 @@
+.project
+.settings/
+/nbproject/private/
+/tmp/
+/tmp/*
+/tmp/sessions.dat
+/tmp/google-credential.json
+client_secret.json
