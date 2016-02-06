@@ -1,5 +1,6 @@
 .project
 .settings/
+/nbproject
 /nbproject/private/
 /tmp/sessions.dat
 /tmp/gmail-credential.json
