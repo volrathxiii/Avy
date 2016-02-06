@@ -12,6 +12,7 @@ require_once INCLUDES_DIR.'UserFunctions.abstract.php';
 require_once INCLUDES_DIR.'Triggers.class.php';
 require_once INCLUDES_DIR.'Prompt.class.php';
 require_once INCLUDES_DIR.'TTS.class.php';
+require_once INCLUDES_DIR.'AvyCron.class.php';
 
 class Avy
 {
