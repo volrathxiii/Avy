@@ -48,7 +48,10 @@ class Core extends UserFunctions {
     public function check_state() {
         echo "Checking States\n";
         $session = Session::getInstance();
-        $SESSIONS_ = $session->Get('_STATES_');
+        $SESSIONS_ = "STATES:";
+        $SESSIONS_ .= $session->Get('_STATES_');
+        $SESSIONS_ = "CRON:";
+        $SESSIONS_ .= $session->Get('_CRON_');
         var_dump($SESSIONS_);
     }
 
