@@ -18,6 +18,7 @@ class CoffeeMaker extends UserFunctions {
     );
     public $triggers = array(
         'make_coffee' => array(
+            'btn_label' => 'Make Coffee',
             array('make'),
             array('make','for'),
             array('make','now'),
@@ -26,6 +27,7 @@ class CoffeeMaker extends UserFunctions {
             array('make','at','for'),
             array('make','tomorrow','at'),
             array('make','tomorrow','at','for'),
+            array('make','now','toggle','switch','auto','c07d5824e0e18556f45fb6f34e1869ad'),
         ),
     );
 
@@ -119,11 +121,13 @@ class CoffeeMaker extends UserFunctions {
     public function start_coffee_machine() {
         //Start coffee machine code
         echo "Starting coffee maker!\n";
+        shell_exec('sudo python /var/www/Avy/bin/relay_on_2.py');
     }
     
     public function stop_coffee_machine(){
         //Stop coffee machine code
         echo "Stopping coffee maker!\n";
+        shell_exec('sudo python /var/www/Avy/bin/relay_off_2.py');
     }
     
     public function schedule_start_coffee_machine($timestamp){

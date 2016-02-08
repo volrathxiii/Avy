@@ -83,6 +83,7 @@ if(isset($_GET['p'])){
             <ul>
                 <li <?php if($page == 'dashboard' || $page == ''){ echo 'class="Selected"';}?>><a href="?p=dashboard">Dashboard</a></li>
                 <li <?php if($page == 'Switches'){ echo 'class="Selected"';}?>><a href="?p=Switches">Switches</a></li>
+                <li <?php if($page == 'CoffeeMaker'){ echo 'class="Selected"';}?>><a href="?p=CoffeeMaker">Coffee Maker</a></li>
                 <li <?php if($page == 'MultiMedia'){ echo 'class="Selected"';}?>><a href="?p=MultiMedia">Multimedia</a></li>
                 <li><span>Remote</span>
                     <ul>
