@@ -4,6 +4,7 @@ class Core extends UserFunctions {
 
     public $Name = "Core";
     public $triggered = false;
+    public $StateStorage = "CORE";
     public $primarytriggers = array(
         array('core'),
         array('codes'),
@@ -26,7 +27,34 @@ class Core extends UserFunctions {
             array('run','cron'),
             array('run','cron','67f8c3fc1127a53e4a09c814dd8f2371')
         ),
+        'speaker_toggle' => array(
+            'btn_label' => 'Speaker',
+            array('speaker','toggle','f629180510747870e7cb2f463cfd03f3')
+        ),
     );
+    
+    public function speaker_toggle(){
+        $state = $this->state->Get($this->StateStorage);
+        
+        if($state['speaker'] == 0){
+            $state['speaker'] = 1;
+            shell_exec('sudo python /var/www/Avy/bin/relay_on_1.py');
+        }else{
+            $state['speaker'] = 0;
+            shell_exec('sudo python /var/www/Avy/bin/relay_off_1.py');
+        }
+        /*$current = $state['channel'];
+
+        shell_exec("sudo irsend SEND_ONCE " . $this->Device . " KEY_CHANNELUP");
+
+        //Add toggle capability
+        //$num_padded = sprintf("%02d", $num);
+        $state['channel'] = sprintf("%03s", $current + 1);
+        $this->state->Set($this->StateStorage, $state);
+        echo "TV Box Channel: " . $state['channel'];
+         * 
+         */
+    }
     /**
      * flow
      * - check for cron to run
