@@ -43,6 +43,9 @@ class Core extends UserFunctions {
             $state['speaker'] = 0;
             shell_exec('sudo python /var/www/Avy/bin/relay_off_1.py');
         }
+        
+        $this->state->Set($this->StateStorage, $state);
+        
         /*$current = $state['channel'];
 
         shell_exec("sudo irsend SEND_ONCE " . $this->Device . " KEY_CHANNELUP");
