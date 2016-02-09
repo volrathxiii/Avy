@@ -6,12 +6,18 @@ Avy is PHP Voice Processor for PIAUISuite by Steven Hickson for Raspberry Pi. It
 2. https://www.youtube.com/watch?v=KKaHTOo2LYI
 
 ## Examples using Voice Commands
-1. Avy with Relay (Speaker & Coffee Maker)
+
+Avy with Relay (Speaker & Coffee Maker)
+
 + https://www.youtube.com/watch?v=zY2QasfgHeY
 + https://www.youtube.com/watch?v=0VQO7iaBypQ
-2. Schedules with Tack Switch
+
+Schedules with Tack Switch
+
 + https://www.youtube.com/watch?v=BnkNOmRGkP0
-3. Controlling TV with IR Blaster
+
+Controlling TV with IR Blaster
+
 + https://www.youtube.com/watch?v=I3c22YieCdw
 + https://www.youtube.com/watch?v=iRebIsn_Qkc
 
